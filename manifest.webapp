@@ -9,8 +9,8 @@
     "128": "/img/icons/radio.png"
   },
   "developer": {
-    "name": "Your Name",
-    "url": "http://yourawesomeapp.com"
+    "name": "cdrc",
+    "url": "http://github.com/cdrc"
   },
   "installs_allowed_from": ["*"],
   "appcache_path": "/cache.manifest",
