@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <x-listview class="list">
+      <header>
+        <h1>Radio web player</h1>
+      <!--  <button class="add" data-view=".edit" data-animation="slideDown">+</button> -->
+      </header>
+    </x-listview>
+
+    <x-view class="detail">
+      <header>
+        <h1>Details</h1>
+      <!--  <button data-view="x-view.edit">Edit</button> -->
+      </header>
+
+      <h1 class="title"></h1>
+      <div class="player"></div>
+      <p class="date"></p>
+    </x-view>
+
+    <x-view class="edit">
+      <header><h1>Edit</h1></header>
+      <div class="field">Title: <input type="text" name="title" /></div>
+      <div class="field">Description: <input type="text" name="desc" /></div>
+      <button type="submit" class="add">Add</button>
+    </x-view>
+
+<a href="http://thenounproject.com/noun/radio/#icon-No3794" target="_blank">Radio</a> designed by <a href="http://thenounproject.com/nifanic" target="_blank">Nick Nifadéff</a> from The Noun Project
+
+    <div class="loading">Loading...</div>
+
+    <!-- Using require.js, a module system for javascript, include the
+         js files. This loads "main.js", which in turn can load other
+         files, all handled by require.js:
+         http://requirejs.org/docs/api.html#jsfiles -->
+    <script type="text/javascript"
+            data-main="js/init.js"
+            src="js/lib/require.js"></script>
+  </body>
+</html>
