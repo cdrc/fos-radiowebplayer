@@ -36,8 +36,25 @@ x-view.edit .field {
 x-listview.list li:before {
 
 }
+x-view.detail .contents{
+  padding:0;
 
+}
 ul li {
    float: left;
     width: 50%;
+}
+
+/** Player **/
+
+.play {
+    background: url("../img/play.png") no-repeat scroll center center transparent;
+    border-radius: 110px 110px 110px 110px;
+    display: block;
+    height: 95px;
+    margin: 0 auto;
+    width: 95px;
+}
+.play:hover{
+    box-shadow: 0 0 0 6px #01C5ED inset;
 }

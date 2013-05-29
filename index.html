@@ -16,8 +16,8 @@
   <body>
     <x-listview class="list">
       <header>
-        <h1>Radio web player</h1>
-      <!--  <button class="add" data-view=".edit" data-animation="slideDown">+</button> -->
+        <h1>Radio</h1>
+
       </header>
     </x-listview>
 
@@ -28,8 +28,15 @@
       </header>
 
       <h1 class="title"></h1>
-      <div class="player"></div>
-      <p class="date"></p>
+
+        <audio id="player">
+          <source src="" type="audio/ogg" id="streamsrc">
+        </audio>
+
+        <div class="audiocontrols">
+          <a href="#" class="play" data-stream="" id="play"></a>
+          <a href="#" class="stop">Stop</a>
+        </div>
     </x-view>
 
     <x-view class="edit">

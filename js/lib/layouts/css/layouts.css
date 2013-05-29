@@ -1,3 +1,4 @@
+html{ font-size: 62.5%;}
 html,
 body {
   margin: 0;
@@ -21,8 +22,6 @@ body {
   margin: 0;
 }
 .list ul li {
-  margin: 0;
-
   cursor: pointer;
 }
 .anim-background {
@@ -60,12 +59,12 @@ x-listview > footer {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(top, #c66a00, #b54d17);
-  background: -o-linear-gradient(top, #c66a00, #b54d17);
-  background: -ms-linear-gradient(top, #c66a00, #b54d17);
-  background: -moz-linear-gradient(top, #c66a00, #b54d17);
-  background: -webkit-linear-gradient(top, #c66a00, #b54d17);
-  border-bottom: 1px solid #933212;
+  background: linear-gradient(top, #4D4E53, #333333);
+  background: -o-linear-gradient(top, #4D4E53, #333333);
+  background: -ms-linear-gradient(top, #4D4E53, #333333);
+  background: -moz-linear-gradient(top, #4D4E53, #333333);
+  background: -webkit-linear-gradient(top, #4D4E53, #333333);
+  border-bottom: 1px solid #000;
   box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.7);
   -o-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.7);
   -ms-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.7);
@@ -74,6 +73,7 @@ x-listview > footer {
   color: white;
   height: 2em;
   padding: .5em 0;
+  font-size: 1.6rem;
 }
 x-view > header .navitems,
 x-listview > header .navitems {
@@ -116,9 +116,22 @@ x-listview > ._contents {
   overflow-y: auto;
   width: 100%;
   height: 100%;
+  background:#4D4E53;
 }
 x-listview > ._contents > .contents {
   padding: 0;
+}
+._list li{
+    background: -moz-linear-gradient(center bottom , #4D4E53, #333333) repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 118px;
+    margin: 3px;
+    padding: 10px;
+    width: 133px;
+    text-align:center;
+}
+._list img {
+    width: 100px;
 }
 ._list li.highlighted {
   background-color: #99bbdd;

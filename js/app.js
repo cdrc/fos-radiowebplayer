@@ -21,34 +21,53 @@ define(function(require) {
             d.getFullYear();
     }
 
+    // Player <audio>
+    var audio = document.getElementById('player');
+     $('.audiocontrols a.play').on('click',function(e){
+      e.preventDefault();
+      //fill source src with data-stream
+        play = document.getElementById('play');
+        url = play.getAttribute('data-stream');
+        source = document.getElementById('streamsrc');
+        source.setAttribute('src', url);
+        audio.load();
+      audio.play();
+     });
+     $('.audiocontrols a.stop').on('click',function(e){
+      e.preventDefault();
+      audio.pause();
+      audio.currentTime=0;
+     });
+
+
     // List view
 
     var list = $('.list').get(0);
     list.add({ title: 'RMC',
                img: '<img src="img/logos/rmc.png">',
-               desc: '<audio controls><source src="http://vipicecast.yacast.net:80/rmc_web" type="audio/mpeg"></audio>',
+               ban: '<img src="img/logos/banrmc.png">',
+               desc: 'http://vipicecast.yacast.net:80/rmc_web',
+               //desc: 'file:///home/cdrc/workspace/radiowebplayer/app/www/AudioTest.ogg',
                });
     list.add({ title: 'France Culture',
                img: '<img src="img/logos/fculture.png">',
-               desc: '<audio controls><source src="http://mp3.live.tv-radio.com/franceculture/all/franceculturehautdebit.mp3" type="audio/mpeg"></audio>',
+               desc: 'http://mp3.live.tv-radio.com/franceculture/all/franceculturehautdebit.mp3',
                });
     list.add({ title: 'France Info',
                img: '<img src="img/logos/finfo.png">',
-               desc: '<source src="http://mp3.live.tv-radio.com/franceinfo/all/franceinfohautdebit.mp3" type="audio/mpeg">',
+               desc: 'http://mp3.live.tv-radio.com/franceinfo/all/franceinfohautdebit.mp3',
                });
     list.add({ title: 'France Inter',
                img: '<img src="img/logos/finter.png">',
-               desc: '<audio controls><source src="http://mp3.live.tv-radio.com/franceinter/all/franceinterhautdebit.mp3" type="audio/mpeg"></audio>',
+               desc: 'http://mp3.live.tv-radio.com/franceinter/all/franceinterhautdebit.mp3',
                });
 
     // Detail view
 
     var detail = $('.detail').get(0);
     detail.render = function(item) {
-        $('.title', this).html(item.get('img'));
-    //    $('.desc', this).html(item.get('desc'));
-     //   $('.date', this).text(formatDate(item.get('date')));
-        $('.player', this).html(item.get('desc'));
+        $('.title', this).html(item.get('ban'));
+         document.getElementById('play').setAttribute('data-stream',item.get('desc'));
     };
 
     // Edit view

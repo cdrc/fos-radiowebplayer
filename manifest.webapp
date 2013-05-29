@@ -1,7 +1,7 @@
 {
   "version": "0.1",
   "name": "Radio web player",
-  "description": "Your new awesome Open Web App",
+  "description": "Écouter les radios françaises en streaming",
   "launch_path": "/index.html",
   "icons": {
     "16": "/img/icons/radio.png",
@@ -13,12 +13,17 @@
     "url": "http://github.com/cdrc"
   },
   "installs_allowed_from": ["*"],
-  "appcache_path": "/cache.manifest",
   "locales": {
-    "es": {
-      "description": "Su nueva aplicación impresionante Open Web",
+    "en": {
+      "description": "Listen to french radio's live stream",
       "developer": {
-        "url": "http://yourawesomeapp.com"
+        "url": "http://github.com/cdrc"
+      }
+    },
+    "es": {
+      "description": "Listen to french radio's live stream",
+      "developer": {
+        "url": "http://github.com/cdrc"
       }
     },
     "it": {
@@ -28,5 +33,5 @@
       }
     }
   },
-  "default_locale": "en"
+  "default_locale": "fr"
 }
